@@ -21,24 +21,28 @@ The Snowflake database architecture blends elements of traditional shared-disk a
 ## Modular Code Overview
 
 ```arduino
-efficient_airflow_managed_etl/
+kinesis_snowflake_data_pipeline/
 ├── src/
-│   ├── data_ingestion/
-│   │   ├── aws_ec2_logs_ingestion.py
-├── real_time_analytics_pipeline/
-│   │   ├── airflow_managed_etl.py
-├── mitigating_ddos_and_bot_attacks/
-│   │   ├── lambda_mitigation.py
+│   ├── ec2_logs_emitter/
+│   │   ├── customer_data.py
+│   │   ├── order_data.py
 ├── infrastructure/
-│   ├── deploy_ec2_logs_ingestion.sh
-│   ├── deploy_airflow_managed_etl.sh
-│   ├── deploy_lambda_mitigation.sh
+│   ├── deploy_ec2_instance.sh
+│   ├── deploy_kinesis_firehose.sh
+│   ├── deploy_airflow_environment.sh
+│   ├── deploy_snowflake_ingestion.sh
 ├── config/
-│   ├── ec2_logs_ingestion_config.json
-│   ├── airflow_managed_etl_config.json
-│   ├── lambda_mitigation_config.json
+│   ├── kinesis_firehose_config.json
+│   ├── airflow_dag_config.json
+│   ├── snowflake_config.json
+├── data/
+│   ├── landing_zone/
+│   ├── processing_zone/
+│   ├── processed_zone/
 ├── images/
-│   ├── aws_ec2_logs.png
+│   ├── kinesis_logo.png
+│   ├── airflow_logo.png
 │   ├── snowflake_logo.png
 ├── README.md
+
 ```
