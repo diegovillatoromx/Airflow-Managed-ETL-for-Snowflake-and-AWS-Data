@@ -70,3 +70,5 @@ kinesis_snowflake_data_pipeline/
 ├── README.md
 
 ```
+
+## Methodology
