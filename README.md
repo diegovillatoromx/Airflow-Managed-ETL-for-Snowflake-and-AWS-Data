@@ -106,7 +106,7 @@ This project sets up an end-to-end data pipeline using various AWS services, inc
 
 - **Scripts:** [upload_data_to_landing.sh](scripts/upload_data_to_landing.sh), [trigger_airflow_dag.sh](scripts/trigger_airflow_dag.sh), [load_data_to_snowflake.sh](scripts/load_data_to_snowflake.sh), [transform_data_in_snowflake.sh](scripts/transform_data_in_snowflake.sh), [transfer_data_between_zones.sh](scripts/transfer_data_between_zones.sh)
 
-### Instructions for Use
+### Instructions for Use 
 
 1. Execute each script in the `infrastructure/` folder to create the necessary resources.
 2. Customize configuration files in the `config/` folder according to your project needs.
