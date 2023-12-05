@@ -1,0 +1,5 @@
+// config/s3_bucket_config.json
+{
+  "s3_bucket_name": "snowflakedatapipeline",
+  "aws_region": "us-east-1"
+}
