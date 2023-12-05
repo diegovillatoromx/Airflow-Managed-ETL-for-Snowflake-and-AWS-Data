@@ -20,7 +20,7 @@ The Snowflake database architecture blends elements of traditional shared-disk a
 
 ## Modular Code Overview
 
-```arduino
+```terminal
 kinesis_snowflake_data_pipeline/
 ├── src/
 │   ├── ec2_logs_emitter/
@@ -33,12 +33,22 @@ kinesis_snowflake_data_pipeline/
 │   ├── create_kinesis_firehose_delivery.sh
 │   ├── install_kinesis_agent.sh
 │   ├── move_data_to_firehose_delivery.sh
+│   ├── setup_snowflake.sh
+│   ├── create_airflow_dag.sh
+│   ├── mwaa_setup/
+│   │   ├── create_mwaa_environment.sh
+│   │   ├── add_snowflake_connection.sh
 ├── config/
 │   ├── s3_bucket_config.json
 │   ├── iam_role_config.json
 │   ├── ec2_instance_config.json
 │   ├── kinesis_firehose_config.json
 │   ├── kinesis_agent_config.json
+│   ├── snowflake_config.json
+│   ├── airflow_dag_config.json
+│   ├── mwaa_config/
+│   │   ├── mwaa_environment_config.json
+│   │   ├── snowflake_connection_config.json
 ├── data/
 │   ├── landing_zone/
 │   ├── processing_zone/
@@ -47,6 +57,12 @@ kinesis_snowflake_data_pipeline/
 │   │   ├── customer_data_file.txt
 │   ├── order/
 │   │   ├── order_data_file.txt
+├── scripts/
+│   ├── upload_data_to_landing.sh
+│   ├── trigger_airflow_dag.sh
+│   ├── load_data_to_snowflake.sh
+│   ├── transform_data_in_snowflake.sh
+│   ├── transfer_data_between_zones.sh
 ├── images/
 │   ├── kinesis_logo.png
 │   ├── airflow_logo.png
