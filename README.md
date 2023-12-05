@@ -27,18 +27,26 @@ kinesis_snowflake_data_pipeline/
 │   │   ├── customer_data.py
 │   │   ├── order_data.py
 ├── infrastructure/
-│   ├── deploy_ec2_instance.sh
-│   ├── deploy_kinesis_firehose.sh
-│   ├── deploy_airflow_environment.sh
-│   ├── deploy_snowflake_ingestion.sh
+│   ├── create_s3_bucket.sh
+│   ├── setup_iam_role.sh
+│   ├── create_ec2_instance.sh
+│   ├── create_kinesis_firehose_delivery.sh
+│   ├── install_kinesis_agent.sh
+│   ├── move_data_to_firehose_delivery.sh
 ├── config/
+│   ├── s3_bucket_config.json
+│   ├── iam_role_config.json
+│   ├── ec2_instance_config.json
 │   ├── kinesis_firehose_config.json
-│   ├── airflow_dag_config.json
-│   ├── snowflake_config.json
+│   ├── kinesis_agent_config.json
 ├── data/
 │   ├── landing_zone/
 │   ├── processing_zone/
 │   ├── processed_zone/
+│   ├── customer/
+│   │   ├── customer_data_file.txt
+│   ├── order/
+│   │   ├── order_data_file.txt
 ├── images/
 │   ├── kinesis_logo.png
 │   ├── airflow_logo.png
