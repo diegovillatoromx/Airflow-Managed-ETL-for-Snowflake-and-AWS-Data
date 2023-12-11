@@ -1,0 +1,7 @@
+{
+  "region": "us-east-1",
+  "instanceType": "t2.micro",
+  "instanceName": "snowflakedatapipeline",
+  "iamRoleName": "AmazonFirehoseRole",
+  "amiId": "ami-0c55b159cbfafe1f0"
+}
