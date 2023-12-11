@@ -110,6 +110,6 @@ This project sets up an end-to-end data pipeline using various AWS services, inc
 
 1. Execute each script in the `infrastructure/` folder to create the necessary resources.
 2. Customize configuration files in the `config/` folder according to your project needs.
-3. Follow the project steps outlined in the README to set up and execute the data pipeline.
+3. Follow the project steps outlined in the README to set up and execute the data pipeline. 
 
 Feel free to adjust the project structure and scripts as needed for your specific requirements. If you have any questions or need further assistance, please let me know!
