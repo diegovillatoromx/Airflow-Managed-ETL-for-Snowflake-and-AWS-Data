@@ -1,0 +1,9 @@
+{
+  "delivery_stream_name": "CustomerDeliveryFirehose",
+  "s3_bucket": "snowflakedatapipeline",
+  "s3_bucket_prefix": "firehose/customers/landing/",
+  "s3_error_prefix": "firehose/errors/customers/",
+  "buffer_interval": 60,
+  "role_arn": "ARN_DEL_ROLE_DE_S3",
+  "bucket_arn": "ARN_DEL_BUCKET_S3"
+}
