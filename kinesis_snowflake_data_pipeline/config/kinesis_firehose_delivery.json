@@ -1,8 +1,8 @@
 {
   "DeliveryStreamName": "CustomerDeliveryFirehose",
   "S3DestinationConfiguration": {
-    "RoleARN": "TU_ARN_DEL_ROL_DE_S3",
-    "BucketARN": "TU_ARN_DEL_BUCKET_S3",
+    "RoleARN": "YOUR_S3_ROLE_ARN",
+    "BucketARN": "YOUR_S3_BUCKET_ARN",
     "Prefix": "firehose/customers/landing/",
     "ErrorOutputPrefix": "firehose/errors/customers/",
     "BufferingHints": {
@@ -11,4 +11,3 @@
     }
   }
 }
- 
