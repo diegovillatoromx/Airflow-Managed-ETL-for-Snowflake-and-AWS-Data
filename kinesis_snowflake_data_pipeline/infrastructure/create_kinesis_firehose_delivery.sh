@@ -1,15 +1,15 @@
 #!/bin/bash
 
-# Obtener variables desde el archivo JSON
+# Function to source variables from JSON
 source_vars() {
   local json_file="$1"
-  echo $(jq -r ".delivery_stream_name" "$json_file")
-  echo $(jq -r ".s3_bucket" "$json_file")
-  echo $(jq -r ".s3_bucket_prefix" "$json_file")
-  echo $(jq -r ".s3_error_prefix" "$json_file")
-  echo $(jq -r ".buffer_interval" "$json_file")
-  echo $(jq -r ".role_arn" "$json_file")
-  echo $(jq -r ".bucket_arn" "$json_file")
+  jq -r ".delivery_stream_name" "$json_file"
+  jq -r ".s3_bucket" "$json_file"
+  jq -r ".s3_bucket_prefix" "$json_file"
+  jq -r ".s3_error_prefix" "$json_file"
+  jq -r ".buffer_interval" "$json_file"
+  jq -r ".role_arn" "$json_file"
+  jq -r ".bucket_arn" "$json_file"
 }
 
 # Variables
@@ -21,7 +21,7 @@ buffer_interval=$(source_vars "kinesis_firehose_delivery.json" | sed -n 5p)
 role_arn=$(source_vars "kinesis_firehose_delivery.json" | sed -n 6p)
 bucket_arn=$(source_vars "kinesis_firehose_delivery.json" | sed -n 7p)
 
-# Crear el flujo de entrega (Kinesis Data Firehose)
+# Create the delivery stream (Kinesis Data Firehose)
 aws firehose create-delivery-stream \
   --delivery-stream-name $delivery_stream_name \
   --delivery-stream-type DirectPut \
@@ -32,4 +32,4 @@ aws firehose create-delivery-stream \
     ErrorOutputPrefix=$s3_error_prefix \
     BufferingHints="{\"SizeInMBs\": 5, \"IntervalInSeconds\": $buffer_interval}"
 
-echo "Kinesis Data Firehose creado con el nombre: $delivery_stream_name"
+echo "Kinesis Data Firehose created with the name: $delivery_stream_name"
