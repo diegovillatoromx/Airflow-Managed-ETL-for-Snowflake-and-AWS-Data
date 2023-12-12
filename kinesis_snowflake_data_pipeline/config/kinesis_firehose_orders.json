@@ -1,0 +1,13 @@
+{
+  "DeliveryStreamName": "OrdersDeliveryFirehose",
+  "S3DestinationConfiguration": {
+    "RoleARN": "YOUR_ROLE_ARN",
+    "BucketARN": "YOUR_BUCKET_ARN",
+    "Prefix": "firehose/orders/landing/",
+    "ErrorOutputPrefix": "firehose/errors/orders/",
+    "BufferingHints": {
+      "SizeInMBs": 5,
+      "IntervalInSeconds": 60
+    }
+  }
+}
