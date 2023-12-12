@@ -42,7 +42,7 @@ kinesis_snowflake_data_pipeline/
 │   ├── s3_bucket_config.json
 │   ├── iam_role_config.json
 │   ├── ec2_instance_config.json
-│   ├── kinesis_firehose_config.json
+│   ├── kinesis_firehose_delivery.json
 │   ├── kinesis_agent_config.json
 │   ├── snowflake_config.json
 │   ├── airflow_dag_config.json
