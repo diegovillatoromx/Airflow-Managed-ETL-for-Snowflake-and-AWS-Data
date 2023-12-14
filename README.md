@@ -87,22 +87,37 @@ This project sets up an end-to-end data pipeline using various AWS services, inc
 - **Script:** [create_iam_role.sh](infrastructure/create_iam_role.sh)
 - **Configuration:** [iam_role_config.json](config/iam_role_config.json)
 
-#### 3. Snowflake Configuration
+#### 3. Creation for EC2 Service
+
+- **Script:** [create_iam_role.sh](infrastructure/create_iam_role.sh)
+- **Configuration:** [iam_role_config.json](config/iam_role_config.json)
+
+#### 4. Creation for Kinesis Firehose
+
+- **Script:** [create_iam_role.sh](infrastructure/create_iam_role.sh)
+- **Configuration:** [iam_role_config.json](config/iam_role_config.json)
+
+#### 5. Installing Kinesis Agent and sending data to firehose
 
 - **Script:** [setup_snowflake.sh](infrastructure/setup_snowflake.sh)
 - **Configuration:** [snowflake_config.json](config/snowflake_config.json)
 
-#### 4. Airflow DAG Creation
+#### 6. Snowflake Configuration
+
+- **Script:** [setup_snowflake.sh](infrastructure/setup_snowflake.sh)
+- **Configuration:** [snowflake_config.json](config/snowflake_config.json)
+
+#### 7. Airflow DAG Creation
 
 - **Script:** [create_airflow_dag.sh](infrastructure/create_airflow_dag.sh)
 - **Configuration:** [airflow_dag_config.json](config/airflow_dag_config.json)
 
-#### 5. Amazon MWAA Setup and Snowflake Connection
+#### 8. Amazon MWAA Setup and Snowflake Connection
 
 - **Scripts:** [mwaa_setup/create_mwaa_environment.sh](infrastructure/mwaa_setup/create_mwaa_environment.sh), [mwaa_setup/add_snowflake_connection.sh](infrastructure/mwaa_setup/add_snowflake_connection.sh)
 - **Configuration:** [mwaa_config/mwaa_environment_config.json](config/mwaa_config/mwaa_environment_config.json), [mwaa_config/snowflake_connection_config.json](config/mwaa_config/snowflake_connection_config.json)
 
-#### 6. Ingestion and Transformation in Airflow-Snowflake Pipeline
+#### 9. Ingestion and Transformation in Airflow-Snowflake Pipeline
 
 - **Scripts:** [upload_data_to_landing.sh](scripts/upload_data_to_landing.sh), [trigger_airflow_dag.sh](scripts/trigger_airflow_dag.sh), [load_data_to_snowflake.sh](scripts/load_data_to_snowflake.sh), [transform_data_in_snowflake.sh](scripts/transform_data_in_snowflake.sh), [transfer_data_between_zones.sh](scripts/transfer_data_between_zones.sh)
 
