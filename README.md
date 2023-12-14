@@ -99,8 +99,50 @@ This project sets up an end-to-end data pipeline using various AWS services, inc
 
 #### 5. Installing Kinesis Agent and sending data to firehose
 
-- **Script:** [setup_snowflake.sh](infrastructure/setup_snowflake.sh)
-- **Configuration:** [snowflake_config.json](config/snowflake_config.json)
+##### Step 1: Prepare the AWS Environment
+###### Ensure that your EC2 instance is running and you can connect to it.
+###### Verify that you have the necessary IAM policies to allow the Kinesis Agent to send data to Kinesis Firehose.
+
+##### Step 2: Connect to Your EC2 Instance
+###### Use SSH to connect to your Amazon EC2 instance.
+
+##### Step 3: Install the Amazon Kinesis Agent
+```terminal
+sudo yum install -y aws-kinesis-agent
+```
+
+##### Step 4: Configure the Amazon Kinesis Agent
+###### Navigate to the Kinesis Agent configuration directory
+```terminal
+cd /etc/aws-kinesis
+```
+# Open the agent configuration file with a text editor such as vim or nano
+sudo vim agent.json
+# Edit the agent.json file to configure the data flows, specifying file patterns for your .csv files and the names of your Kinesis Firehose delivery streams.
+
+# Step 5: Edit or Verify Data Files (Optional)
+# If needed, edit or verify your .csv files to ensure they exist at the path you specified in the agent configuration.
+
+# Step 6: Start the Amazon Kinesis Agent
+# After saving your configuration, start the Kinesis Agent
+sudo service aws-kinesis-agent start
+
+# Verify that the service has started correctly
+sudo service aws-kinesis-agent status
+
+# Step 7: Validate the Configuration of the Firehose Delivery Stream
+# Ensure that the Kinesis Firehose Delivery Stream is correctly configured in the AWS console.
+# Check that the delivery streams have the correct destination configured (S3, Redshift, Elasticsearch, etc.).
+
+# Step 8: Monitor the Data Sending
+# Monitor the Kinesis Agent logs to ensure data is being sent correctly
+tail -f /var/log/aws-kinesis-agent/aws-kinesis-agent.log
+
+# Use CloudWatch to monitor metrics and alarms associated with your delivery stream.
+
+# Step 9: Verify Data at the Destination
+# Check that the data has arrived at the configured destination in Kinesis Firehose (e.g., an S3 bucket).
+# Verify the arrival of data and its format to ensure everything is being processed as expected.
 
 #### 6. Snowflake Configuration
 
