@@ -159,13 +159,14 @@ sudo service aws-kinesis-agent status
 
 ##### Step 8: Monitor the Data Sending
 ###### Monitor the Kinesis Agent logs to ensure data is being sent correctly
+```terminal
 tail -f /var/log/aws-kinesis-agent/aws-kinesis-agent.log
+```
+###### Use CloudWatch to monitor metrics and alarms associated with your delivery stream.
 
-# Use CloudWatch to monitor metrics and alarms associated with your delivery stream.
-
-# Step 9: Verify Data at the Destination
-# Check that the data has arrived at the configured destination in Kinesis Firehose (e.g., an S3 bucket).
-# Verify the arrival of data and its format to ensure everything is being processed as expected.
+##### Step 9: Verify Data at the Destination
+###### Check that the data has arrived at the configured destination in Kinesis Firehose (e.g., an S3 bucket).
+###### Verify the arrival of data and its format to ensure everything is being processed as expected.
 
 #### 6. Snowflake Configuration
 
