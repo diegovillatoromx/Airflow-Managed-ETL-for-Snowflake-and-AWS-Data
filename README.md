@@ -121,7 +121,25 @@ cd /etc/aws-kinesis
 sudo vim agent.json
 ```
 ###### Edit the agent.json file to configure the data flows, specifying file patterns for your .csv files and the names of your Kinesis Firehose delivery streams.
+```ssh
+{
+  "cloudwatch.emitMetrics": true,
+  "firehose.endpoint": "firehose.ap-southeast-1.amazonaws.com",
 
+  "flows": [
+    {
+      "filePattern": "/tmp/orders.csv*",
+      "deliveryStream": "OrdersSnowflake",
+      "initialPosition": "START_OF_FILE"
+    },
+    {
+      "filePattern": "/tmp/customers.csv*",
+      "deliveryStream": "CustomersDeliveryFirehose",
+      "initialPosition": "START_OF_FILE"
+    }
+  ]
+}
+```
 ##### Step 5: Edit or Verify Data Files (Optional)
 ###### If needed, edit or verify your .csv files to ensure they exist at the path you specified in the agent configuration.
 
