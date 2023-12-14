@@ -148,8 +148,10 @@ sudo vim agent.json
 ```terminal
 sudo service aws-kinesis-agent start
 ```
-# Verify that the service has started correctly
+###### Verify that the service has started correctly
+```terminal
 sudo service aws-kinesis-agent status
+```
 
 # Step 7: Validate the Configuration of the Firehose Delivery Stream
 # Ensure that the Kinesis Firehose Delivery Stream is correctly configured in the AWS console.
