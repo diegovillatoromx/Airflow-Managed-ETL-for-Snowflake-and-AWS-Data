@@ -153,12 +153,12 @@ sudo service aws-kinesis-agent start
 sudo service aws-kinesis-agent status
 ```
 
-# Step 7: Validate the Configuration of the Firehose Delivery Stream
-# Ensure that the Kinesis Firehose Delivery Stream is correctly configured in the AWS console.
-# Check that the delivery streams have the correct destination configured (S3, Redshift, Elasticsearch, etc.).
+##### Step 7: Validate the Configuration of the Firehose Delivery Stream
+###### Ensure that the Kinesis Firehose Delivery Stream is correctly configured in the AWS console.
+###### Check that the delivery streams have the correct destination configured (S3, Redshift, Elasticsearch, etc.).
 
-# Step 8: Monitor the Data Sending
-# Monitor the Kinesis Agent logs to ensure data is being sent correctly
+##### Step 8: Monitor the Data Sending
+###### Monitor the Kinesis Agent logs to ensure data is being sent correctly
 tail -f /var/log/aws-kinesis-agent/aws-kinesis-agent.log
 
 # Use CloudWatch to monitor metrics and alarms associated with your delivery stream.
