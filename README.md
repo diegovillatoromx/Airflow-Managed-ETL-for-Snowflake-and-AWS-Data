@@ -116,17 +116,20 @@ sudo yum install -y aws-kinesis-agent
 ```terminal
 cd /etc/aws-kinesis
 ```
-# Open the agent configuration file with a text editor such as vim or nano
+###### Open the agent configuration file with a text editor such as vim or nano
+```terminal 
 sudo vim agent.json
-# Edit the agent.json file to configure the data flows, specifying file patterns for your .csv files and the names of your Kinesis Firehose delivery streams.
+```
+###### Edit the agent.json file to configure the data flows, specifying file patterns for your .csv files and the names of your Kinesis Firehose delivery streams.
 
-# Step 5: Edit or Verify Data Files (Optional)
-# If needed, edit or verify your .csv files to ensure they exist at the path you specified in the agent configuration.
+##### Step 5: Edit or Verify Data Files (Optional)
+###### If needed, edit or verify your .csv files to ensure they exist at the path you specified in the agent configuration.
 
-# Step 6: Start the Amazon Kinesis Agent
-# After saving your configuration, start the Kinesis Agent
+##### Step 6: Start the Amazon Kinesis Agent
+###### After saving your configuration, start the Kinesis Agent
+```terminal
 sudo service aws-kinesis-agent start
-
+```
 # Verify that the service has started correctly
 sudo service aws-kinesis-agent status
 
