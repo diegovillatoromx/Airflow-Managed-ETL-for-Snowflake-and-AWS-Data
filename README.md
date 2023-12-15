@@ -143,10 +143,9 @@ sudo vim agent.json
 ##### Step 5: Edit or Verify Data Files (Optional)
 ###### If needed, edit or verify your .csv files to ensure they exist at the path you specified in the agent configuration.
 ```terminal
-# Transfer customers.csv
+#Transfer customers.csv
 scp customers.csv YourEC2User@YourEC2PublicDNS:/path/to/ec2/directory
-
-# Transfer orders.csv
+#Transfer orders.csv
 scp orders.csv YourEC2User@YourEC2PublicDNS:/path/to/ec2/directory
 ```
 
