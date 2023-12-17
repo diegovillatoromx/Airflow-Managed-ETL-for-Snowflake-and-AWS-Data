@@ -19,7 +19,6 @@ The Snowflake database architecture blends elements of traditional shared-disk a
 
 ![diagram](https://github.com/diegovillatoromx/Airflow-Managed-ETL-for-Snowflake-and-AWS-Data/blob/main/data_architecture.png)
 
-
 ## Modular Code Overview
  
 ```terminal
