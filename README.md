@@ -107,7 +107,7 @@ This project sets up an end-to-end data pipeline using various AWS services, inc
 ##### Step 2: Connect to Your EC2 Instance
 ###### Use SSH to connect to your Amazon EC2 instance.
 
-##### Step 3: Install the Amazon Kinesis Agent
+##### Step 3: Install the Amazon Kinesis Agent 
 ```terminal
 sudo yum install -y aws-kinesis-agent
 ```
