@@ -76,7 +76,7 @@ kinesis_snowflake_data_pipeline/
 
 This project sets up an end-to-end data pipeline using various AWS services, including Kinesis, Apache Airflow, and Snowflake. The pipeline handles customer and order datasets placed on an EC2 machine emitting logs. The Kinesis Agent captures logs and sends them to Kinesis Data Firehose, progressing through three S3 zones - Landing, Processing, and Processed. Snowflake manages data ingestion, transformation, and storage, providing insights into the entire pipeline.
 
-### Project Structure
+### Project Structure 
 
 #### 1. S3 Bucket Creation
 
