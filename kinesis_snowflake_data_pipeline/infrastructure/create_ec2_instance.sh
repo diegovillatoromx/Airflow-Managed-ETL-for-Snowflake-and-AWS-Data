@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Load configuration from JSON file
+# Load configuration from JSON file 
 CONFIG_FILE="config/ec2_instance_config.json"
 KEY_NAME=$(jq -r '.keyName' $CONFIG_FILE)
 SUBNET_ID=$(jq -r '.subnetId' $CONFIG_FILE)
