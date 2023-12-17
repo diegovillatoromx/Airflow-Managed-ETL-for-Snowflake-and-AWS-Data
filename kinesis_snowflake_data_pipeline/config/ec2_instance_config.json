@@ -3,5 +3,5 @@
   "instanceType": "t2.micro",
   "instanceName": "snowflakedatapipeline",
   "iamRoleName": "AmazonFirehoseRole",
-  "amiId": "ami-0c55b159cbfafe1f0"
+  "amiId": "ami-0c55b159cbfafe1f0" 
 }
