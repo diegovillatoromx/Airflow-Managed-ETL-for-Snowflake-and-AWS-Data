@@ -6,7 +6,7 @@
     "Prefix": "firehose/customers/landing/",
     "ErrorOutputPrefix": "firehose/errors/customers/",
     "BufferingHints": {
-      "SizeInMBs": 5,
+      "SizeInMBs": 5, 
       "IntervalInSeconds": 60
     }
   }
