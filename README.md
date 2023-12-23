@@ -8,7 +8,7 @@ Airflow-Managed ETL: Seamlessly integrate AWS EC2 logs into Snowflake and S3. De
 - [Architecture](#architecture)
 - [Dataset](#Dataset)
 - [Modular Code Overview](#modular-code-overview)
-- [Methodology](#Methodology)
+- [Methodology](#Methodology) 
 - [Contribution](#contribution) 
 - [Contact](#contact) 
   
