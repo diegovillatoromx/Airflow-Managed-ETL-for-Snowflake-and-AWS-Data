@@ -2,7 +2,7 @@
 
 # Configuración
 IAM_ROLE_NAME=$(jq -r .iam_role_name config/iam_role_config.json)
-IAM_ROLE_DESCRIPTION=$(jq -r .iam_role_description config/iam_role_config.json)
+IAM_ROLE_DESCRIPTION=$(jq -r .iam_role_description config/iam_role_config.json) 
 
 
 # Crear el rol IAM
